@@ -1,5 +1,14 @@
 
 :root {
+    
+    /* Light Theme */
+    --primary-color: hsl(230, 17%, 14%);
+    --secondary-color: hsl(228, 12%, 44%);
+    --card-color: hsl(227, 47%, 96%);
+    --bg-color: hsl(0, 0%, 100%);
+    --heading-color: hsl(225, 100%, 98%);
+
+
     /* Primary */
     --lime-geren: hsl(163, 72%, 41%);
     --bright-red: hsl(356, 69%, 56%);
@@ -11,20 +20,6 @@
 
     --toggle-dark-btn: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
     --toggle-light-btn: hsl(230, 22%, 74%);
-
-    /* Dark Theme */
-
-    --dark-blue-bg: hsl(230, 17%, 14%);
-    --dark-blue-top: hsl(232, 19%, 15%);
-    --dark-blue-card: hsl(228, 28%, 20%);
-    --light-blue-text: hsl(228, 34%, 66%);
-    --white-text: hsl(0, 0%, 100%);
-
-    /* Light Theme */
-    --pale-blue-top:  hsl(225, 100%, 98%);
-    --pale-blue-bg: hsl(227, 47%, 96%);
-    --gray-blue-text: hsl(228, 12%, 44%);
-    --dark-blue-text: hsl(230, 17%, 14%);
 
     /* Fonts */
     --font-sm: 14px;

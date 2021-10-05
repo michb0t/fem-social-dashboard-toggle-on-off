@@ -7,82 +7,83 @@
   <link rel="stylesheet" href="/css/app.css">
 
   <title>Social Media Dashboard | Michbot</title>
-
-
 </head>
-<body class="light light-scheme flex">
+
+<body class="flex">
   <container class="container">
     <main class="dashboard"> 
-      <section class="header">
-        <div class="header-titles">
-          <h1 class="section-title">Social Media Dashboard</h1>
-          <p class="subtitle">Total Followers: 23,004</p>
-        </div>
-              
+
+      <section class="header">          
+        <h1>Social Media Dashboard</h1>
+        <p class="subtitle">Total Followers: 23,004</p>
       </section>
       
-      <fieldset class="toggle-section">
-        <legend class="subtitle">Dark Mode</legend>
-        <label for="switch" class="toggle-switch">
-          <input type="radio" name="switch" id="switch">
-          <span class="toggle-switch-inner"></span>
-        </label>
+      <fieldset class="toggle-section ">
+        <div class="flex jc-sb pt-10">
+          <legend class="subtitle">Dark Mode</legend>
+          <label for="checkbox" class="toggle-switch">
+            <input type="checkbox" id="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
       </fieldset>
 
       <section class="feature-section">
 
-        <div class="stat-card-lrg bg-light facebook">
+        <div class="stat-card-lrg facebook">
           <div class="flex">
-            <img class="social-icon" src="images/icon-facebook.svg">
-            <span class="subtitle txt-light">@nathanf</span>
+            <img src="images/icon-facebook.svg" alt="facebook">
+            <span class="subtitle">@nathanf</span>
           </div>
-          <h1 class="feature-num">1987</h1>
-          <span class="followers txt-light">Followers</span>
-          <div class="follow-count flex">
-            <img class ="arrow-up" src="images/icon-up.svg">
-            <span class="green">12 Today</span>
+          <h1 class="txt-xl">1987</h1>
+          <span class="txt-sm uppercase">Followers</span>
+          <div class="pt-10 flex">
+            <img src="images/icon-up.svg" alt="icon up">
+            <p class="txt-xs green">12 Today</p>
           </div>
         </div>
         
-          <div class="stat-card-lrg bg-light twitter">
+          <div class="stat-card-lrg twitter">
           <div class="flex">
-            <img class="social-icon" src="images/icon-twitter.svg">
-            <span class="subtitle txt-light">@nathanf</span>
+            <img src="images/icon-twitter.svg" alt="twitter">
+            <span class="subtitle">@nathanf</span>
           </div>
-          <h1 class="feature-num">1044</h1>
-          <span class="followers txt-light">Followers</span>
-          <div class="follow-count flex">
-            <img class ="arrow-up" src="images/icon-up.svg">
-            <span class="green">99 Today</span>
+          <h1 class="txt-xl">1044</h1>
+          <span class="txt-sm uppercase">Followers</span>
+          <div class="pt-10 flex">
+            <img src="images/icon-up.svg" alt="icon up">
+            <span class=" txt-xs green">99 Today</span>
           </div>
         </div>
         
         <div class="instagram">
-          <div class="stat-card-lrg bg-light ig-child">
+          <div class="stat-card-lrg ig-child">
             <div class="flex">
-              <img class="social-icon" src="images/icon-instagram.svg">
+              <img src="images/icon-instagram.svg" alt="instagram">
               <span class="subtitle txt-light">@realnathanf</span>
             </div>
-            <h1 class="feature-num">11k</h1>
-            <span class="followers txt-light">followers</span>
-            <div class="follow-count flex">
-              <img class ="arrow-up" src="images/icon-up.svg">
-              <span class="green">1099 Today</span>
+            <h1 class="txt-xl">11k</h1>
+            <span class="txt-sm uppercase">followers</span>
+            <div class="pt-10 flex">
+              <img src="images/icon-up.svg" alt="icon up">
+              <span class=" txt-xs green">1099 Today</span>
             </div>
           </div>
         </div>
         
         
-        <div class="stat-card-lrg bg-light youtube">
+        <div class="stat-card-lrg youtube">
           <div class="flex">
-            <img class="social-icon" src="images/icon-youtube.svg">
+            <img src="images/icon-youtube.svg" alt="youtube">
             <span class="subtitle txt-light">Nathan F.</span>
           </div>
-          <h1 class="feature-num">8239</h1>
-          <span class="followers txt-light">subscribers</span>
-          <div class="follow-count flex">
-            <img class ="arrow-dwn" src="images/icon-down.svg">
-            <span class="red">144 Today</span>
+
+          <h1 class="txt-xl">8239</h1>
+          <span class="txt-sm uppercase">subscribers</span>
+
+          <div class="pt-10 flex">
+            <img src="images/icon-down.svg" alt="icon down">
+            <span class="txt-xs red">144 Today</span>
           </div>
         </div>
        
@@ -93,109 +94,144 @@
         <h2 class="txt-light">Overview - Today</h2>
 
         <!-- Card 1 -->
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Page Views</span>
-            <img src="images/icon-facebook.svg">
+
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Page Views</span>
+            <img alt="facebook" src="images/icon-facebook.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">87</h2>
-            <span class="green"><img src="images/icon-up.svg"> 3%</span>
+
+          <div class="flex jc-sb">
+            <h2 class="txt-l">87</h2>
+            <div class="flex"> 
+              <img alt="icon up" src="images/icon-up.svg">
+              <span class="txt-xs green">3%</span>
+            </div>
           </div>
         </div>
 
         <!-- Card 2 -->
 
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Likes</span>
-            <img src="images/icon-facebook.svg">
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Likes</span>
+            <img alt="facebook" src="images/icon-facebook.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">52</h2>
-            <span class="red"> <img src="images/icon-down.svg"> 2%</span>
+
+
+          <div class="flex jc-sb">
+            <h2 class="txt-l">52</h2>
+            <div class="flex"> 
+              <img alt="icon down" src="images/icon-down.svg">
+              <span class="txt-xs red">2%</span>
+            </div>
           </div>
         </div>
 
         <!-- Card 3 -->
 
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Likes</span>
-            <img src="images/icon-instagram.svg">
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Likes</span>
+            <img alt="instagram" src="images/icon-instagram.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">5462</h2>
-            <span class="green"> <img src="images/icon-up.svg"> 2257%</span>
+
+          <div class="flex jc-sb">
+            <h2 class="txt-l">5462</h2>
+            <div class="flex"> 
+              <img alt="icon up" src="images/icon-up.svg">
+              <span class="txt-xs green">2257%</span>
+            </div>
           </div>
         </div>
-
        
         <!-- Card 4 -->
 
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Profile Views</span>
-            <img src="images/icon-instagram.svg">
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Profile Views</span>
+            <img alt="instagram" src="images/icon-instagram.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">52k</h2>
-            <span class="green"> <img src="images/icon-up.svg"> 1375%</span>
+
+          <div class="flex jc-sb">
+            <h2 class="txt-l">52k</h2>
+            <div class="flex"> 
+              <img alt="icon up" src="images/icon-up.svg">
+              <span class="txt-xs green">1375%</span>
+            </div>
           </div>
         </div>
-
+       
 
         <!-- Card 5 -->
 
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Retweets</span>
-            <img src="images/icon-twitter.svg">
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Retweets</span>
+            <img alt="twitter" src="images/icon-twitter.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">117</h2>
-            <span class="green"> <img src="images/icon-up.svg"> 303%</span>
+
+          <div class="flex jc-sb">
+            <h2 class="txt-l">117</h2>
+            <div class="flex"> 
+              <img alt="icon up" src="images/icon-up.svg">
+              <span class="txt-xs green">303%</span>
+            </div>
           </div>
         </div>
-
+       
         <!-- Card 6 -->
 
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Likes</span>
-            <img src="images/icon-twitter.svg">
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Likes</span>
+            <img alt="twitter" src="images/icon-twitter.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">507</h2>
-            <span class="green"> <img src="images/icon-up.svg"> 553%</span>
+
+          
+          <div class="flex jc-sb">
+            <h2 class="txt-l">507</h2>
+            <div class="flex"> 
+              <img alt="icon up" src="images/icon-up.svg">
+              <span class="txt-xs green">553%</span>
+            </div>
           </div>
         </div>
+       
 
         <!-- Card 7 -->
 
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Likes</span>
-            <img src="images/icon-youtube.svg">
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Likes</span>
+            <img alt="youtube" src="images/icon-youtube.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">107</h2>
-            <span class="red"> <img src="images/icon-down.svg"> 19%</span>
+
+          
+          <div class="flex jc-sb">
+            <h2 class="txt-l">107</h2>
+            <div class="flex"> 
+              <img alt="icon down" src="images/icon-down.svg">
+              <span class="txt-xs red">19%</span>
+            </div>
           </div>
         </div>
 
         <!-- Card 8 -->
 
-        <div class="stat-card-sm bg-light">
-          <div style="padding-top: 25px" class="flex jc-sb">
-            <span class="subtitle text-light">Total Views</span>
-            <img src="images/icon-youtube.svg">
+        <div class="stat-card-sm">
+          <div class="flex jc-sb pt-10">
+            <span class="subtitle txt-light">Total Views</span>
+            <img alt="youtube" src="images/icon-youtube.svg">
           </div>
-          <div class="follow-count flex jc-sb">
-            <h2 class="num-sm">1407</h2>
-            <span class="red"> <img src="images/icon-down.svg"> 12%</span>
+
+          <div class="flex jc-sb">
+            <h2 class="txt-l">1407</h2>
+            <div class="flex"> 
+              <img alt="icon down" src="images/icon-down.svg">
+              <span class="txt-xs red">12%</span>
+            </div>
           </div>
-        </div>
 
       </section>
 

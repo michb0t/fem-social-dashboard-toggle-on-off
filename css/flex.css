@@ -1,0 +1,18 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+/* justify content */
+.jc-sb {
+    justify-content: space-between;
+}

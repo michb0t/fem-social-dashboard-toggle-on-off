@@ -1,4 +1,6 @@
 @import url("root.css");
+@import url("flex.css");
+@import url("fonts.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 /* Base Styles */
@@ -9,29 +11,19 @@ html {
     box-sizing: border-box;
 }
 
-/* Flex styles */
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.flex-row {
-    flex-direction: row;
-}
-
 
 body {
     min-height: 100vh;
+    background: var(--bg-color);
 }
 
-h1, h1, h3,h4,h5,h6,p {
-    margin: 0;
-    padding: 0;
+
+h1, h2 {
+    color:  var(--primary-color);
+}
+
+span {
+    color: var(--secondary-color);
 }
 
 .container {
@@ -39,37 +31,9 @@ h1, h1, h3,h4,h5,h6,p {
 }
 
 
-
-/* Theme Design */
-.bg-dark {
-    background: hsl(230, 17%, 14%);
-    color: white;
-}
-
-.text-dark {
-    color: hsl(228, 34%, 66%);
-}
-
-
-.bg-light {
-    background: var(--pale-blue-bg);
-    color: var(--dark-blue-text);
-}
-
-.txt-light {
-    color: var(--gray-blue-text);
-}
-
-/* Header Section */
-
-
 .header {
-    border-bottom: 1px solid gray;
-    padding-bottom: 15px;
-}
-
-.header-titles > h1, .header-titles> p {
-    padding: 2.5px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 15px 0;
 }
 
  
@@ -77,105 +41,125 @@ h1, h1, h3,h4,h5,h6,p {
 
 .toggle-section {
     border: 0;
-    position: relative;
-    margin: 20px 0 30px 0;
-    padding: 0;
+    margin: 0;
+    padding:0;
 }
 
 .subtitle {
-    color: var(--gray-blue-text);
+    color: var(--secondary-color);
     font-size: var(--font-sm);
     font-weight: 700;
     padding: 10px 0;
 }
 
 .toggle-switch {
-    position: absolute;
-    top: -28px;
-    right: 0;
+    display: inline-block;
+    position: relative;
     border-radius:34px;
     width: 47px;
-    background: var(--toggle-light-btn);
     height: 25px;
 }
 
 
 .toggle-switch input {
-    opacity: 0;
-    height: 0;
-    width: 0;
+    display: none;
 }
 
-.toggle-switch-inner {
+.slider {
     position: absolute;
     cursor: pointer;
-    border-radius: 34px;
-    background-color: white;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: .4s;
+    background-color: var(--secondary-color); 
+}
+
+.slider:before {
+    position: absolute;
+    background-color: var(--bg-color);
+    content: ""; /*to add space to make a little circle*/
     height: 18px;
     width: 18px;
-    right: 3.5px;
-    bottom: 3px;
+    right: 4px;
+    bottom: 4px;
     transition: all 0.5s ease-out;
+
 }
+
+input:checked +.slider:before {
+    transform: translateX(-20px)
+}
+
+input:checked +.slider {
+    background: var(--toggle-dark-btn);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 
 /* Toggle Active */
 
-.active {
+
+
+/* .active {
     border-radius: 50%;
     position: absolute;
     height: 18px;
     width: 18px;
     left: 3.5px;
     bottom: 3px;
-    background: var(--dark-blue-card);
+    background: var(--card-color);
 
 }
 
 .toggle-dark {
     background: var(--toggle-dark-btn);
     
+} */
+
+/* Small Stat Section */
+
+.stat-card-sm {
+    background: var(--card-color);
+    border-radius: 5px; 
+    padding: 10px 25px;
+    margin: 15px 0;
 }
 
-
+.stat-card-sm img {
+    margin: 0 2.5px;
+}
 
 /* Feature Cards Section */
 
 .stat-card-lrg {
+    background: var(--card-color);
     text-align: center;
     padding: 25px 0;
     margin: 25px 0;
     border-radius: 5px;
 }
 
-.social-icon {
+.stat-card-lrg img {
     margin: 0 10px;
 }
 
-.feature-num {
-    font-size: 300%;
-    padding-top: 20px;
-}
 
-.followers {
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 3px;
-}
-
-.follow-count {
-    padding-top: 20px;
-    font-size: 11px;
-    font-weight: 700;
-}
 
 .green {
     color: var(--lime-geren);
-    margin: 0 5px;
 }
 
 .red {
     color: var(--bright-red);
-    margin: 0 5px;
 }
 
 
@@ -202,28 +186,19 @@ h1, h1, h3,h4,h5,h6,p {
     border-top: 3px solid var(--bright-red);
 }
 
+/* Dark Theme Set */
 
-/* Small Stat Section */
-
-.stat-card-sm {
-    border-radius: 5px; 
-    padding: 10px 35px;
-    margin: 15px 0;
-}
-
-.jc-sb {
-    justify-content: space-between;
-}
-
-.num-sm {
-    font-size: 300%;
-    margin: 0;
-    padding-bottom: 5px;
+[data-theme="dark"] {
+    --primary-color: hsl(0, 0%, 100%);
+    --secondary-color: hsl(228, 34%, 66%);
+    --card-color:hsl(228, 28%, 20%);
+    --bg-color: hsl(230, 17%, 14%);
+    --heading-color: hsl(232, 19%, 15%);
 }
 
 
 /* Media Queries */
-
+/* 
 @media (prefers-color-scheme: bg-light) {
     .bg-light-scheme {background: white; color: var(--gray-blue-text)}
     .bg-dark-scheme {background: var(--dark-blue-bg); color: white}
@@ -232,7 +207,7 @@ h1, h1, h3,h4,h5,h6,p {
 @media (prefers-color-scheme: bg-dark) {
     .bg-light-scheme {background: white; color: var(--gray-blue-text)}
     .bg-dark-scheme {background: var(--dark-blue-bg); color: white}
-}
+} */
 
 
 /* Attribution */
