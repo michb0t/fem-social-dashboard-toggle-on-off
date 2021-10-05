@@ -1,34 +1,27 @@
 Project notes
 
-
 # Light/Dark mode using toggle button 
 - How to create the button style https://www.w3schools.com/howto/howto_css_switch.asp
-- Prefers color-schemes - https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
-- @media (prefers-color-scheme: dark) {}
-- @media (prefers-color-scheme: light) {}
 - Start with day class intiatially.  white background, dark text.
--Toggle switch dark mode: gradient background
+- Toggle switch dark mode: gradient background
 - toggle switch light mode: gray/white 
 
 # Responsive design
 - mobile-view: flex centered column
 - desktop-view: flex centered row 
-- mobile-view: header border bottom 1px
-- desktop-view: no border below header
+- mobile-view: border bottom line 1px
+- desktop-view: no border line below header
 
-
-# arrows and stats 
-- arrow-down red 
-- arrow-up green 
-
-# text 
-- border-top: 2px solid var()
-- usernames: span
-- feature-row, numbers: 300% size
-- followers: uppercase, letter spacing
+# card 
+- border-top: 3px solid 
+- usernames: use span
+- text 300% for feature card, small feature card is 200%
+- followers: uppercase with letter spacing
 
 # Javascript
 - toggle classlist on button click.
+- consider "data-theme:dark" attribute
+- consider storing user preference for next time they visit. store them into local storage
 
 # Gradient border
-- Use background image gradient. Border linear gradients are not supported. 
+- Use the pseudo ::before style to create the top border lime. Border with linear gradients are not supported. 
