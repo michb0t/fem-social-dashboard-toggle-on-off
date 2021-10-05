@@ -209,13 +209,11 @@ input:checked +.slider {
         justify-content: space-between;
         flex-wrap: wrap;
     }
-
     .all-stats {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-
     .stat-card-sm {
         flex-basis: 41%;
     }
@@ -225,8 +223,6 @@ input:checked +.slider {
     .instagram {
         flex-basis: 48%;
     }
-
-
 }
 
 
