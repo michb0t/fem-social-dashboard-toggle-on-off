@@ -26,8 +26,8 @@ span {
     color: var(--secondary-color);
 }
 
-.container {
-    width: 20rem;
+.dashboard {
+    margin: 20px 25px;
 }
 
 
@@ -85,7 +85,6 @@ span {
     right: 4px;
     bottom: 4px;
     transition: all 0.5s ease-out;
-
 }
 
 input:checked +.slider:before {
@@ -108,23 +107,6 @@ input:checked +.slider {
 /* Toggle Active */
 
 
-
-/* .active {
-    border-radius: 50%;
-    position: absolute;
-    height: 18px;
-    width: 18px;
-    left: 3.5px;
-    bottom: 3px;
-    background: var(--card-color);
-
-}
-
-.toggle-dark {
-    background: var(--toggle-dark-btn);
-    
-} */
-
 /* Small Stat Section */
 
 .stat-card-sm {
@@ -138,21 +120,36 @@ input:checked +.slider {
     margin: 0 2.5px;
 }
 
+
 /* Feature Cards Section */
+
+.feature-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-stats {
+    display: flex;
+    flex-direction: column;
+}
 
 .stat-card-lrg {
     background: var(--card-color);
     text-align: center;
     padding: 25px 0;
-    margin: 25px 0;
+    margin: 10px 0;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
 
 .stat-card-lrg img {
     margin: 0 10px;
 }
 
-
+.stat-card-lrg:hover, .stat-card-sm:hover{
+    background: var(--heading-color);
+}
 
 .green {
     color: var(--lime-geren);
@@ -172,15 +169,19 @@ input:checked +.slider {
     border-top: 3px solid var(--twitter);
 }
 
-.instagram {
-    background-image: var(--instagram);
+
+.instagram:before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right,hsl(37, 97%, 70%), hsl(5, 77%, 71%),hsl(329, 70%, 58%));
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
     border-radius: 5px;
-    padding-top: 3px;
 }
 
-.ig-child {
-    margin: 0;
-}
 
 .youtube {
     border-top: 3px solid var(--bright-red);
@@ -191,30 +192,67 @@ input:checked +.slider {
 [data-theme="dark"] {
     --primary-color: hsl(0, 0%, 100%);
     --secondary-color: hsl(228, 34%, 66%);
-    --card-color:hsl(228, 28%, 20%);
-    --bg-color: hsl(230, 17%, 14%);
+    --card-color: hsl(228, 28%, 20%);
+    --bg-color:hsl(230, 17%, 14%);
     --heading-color: hsl(232, 19%, 15%);
 }
 
-
 /* Media Queries */
-/* 
-@media (prefers-color-scheme: bg-light) {
-    .bg-light-scheme {background: white; color: var(--gray-blue-text)}
-    .bg-dark-scheme {background: var(--dark-blue-bg); color: white}
+
+@media (min-width: 700px) {
+
+    .header {
+        border-bottom: none;
+    }
+    .feature-section {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .all-stats {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .stat-card-sm {
+        flex-basis: 41%;
+    }
+    .stat-card-lrg {
+        flex-basis: 48%;
+    }
+    .instagram {
+        flex-basis: 48%;
+    }
+
+
 }
 
-@media (prefers-color-scheme: bg-dark) {
-    .bg-light-scheme {background: white; color: var(--gray-blue-text)}
-    .bg-dark-scheme {background: var(--dark-blue-bg); color: white}
-} */
+
+@media (min-width: 1440px) {
+    .stat-card-lrg {
+        flex-basis: 24%;
+    }
+
+    .instagram {
+        flex-basis: 24%;
+    }
+
+    .stat-card-sm {
+        flex-basis: 20%;
+    }
+}
 
 
 /* Attribution */
 .attribution { 
-    font-size: 11px; text-align: center; 
+    padding-top: 20px;
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--primary-color);
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--secondary-color); 
 }

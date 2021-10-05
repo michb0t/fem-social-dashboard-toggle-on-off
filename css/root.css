@@ -1,12 +1,11 @@
-
 :root {
     
     /* Light Theme */
     --primary-color: hsl(230, 17%, 14%);
     --secondary-color: hsl(228, 12%, 44%);
-    --card-color: hsl(227, 47%, 96%);
+    --card-color: hsl(225, 100%, 98%);
     --bg-color: hsl(0, 0%, 100%);
-    --heading-color: hsl(225, 100%, 98%);
+    --heading-color:hsl(227, 47%, 96%) ;
 
 
     /* Primary */
@@ -14,7 +13,9 @@
     --bright-red: hsl(356, 69%, 56%);
     --facebook: hsl(208, 92%, 53%);
     --twitter: hsl(203, 89%, 53%);
-    --instagram: linear-gradient(to right, hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+    --instagram-start: hsl(37, 97%, 70%);
+    --instagram-middle: hsl(5, 77%, 71%);
+    --instagram-end: hsl(329, 70%, 58%);
 
     /* Toggle Btns */
 
