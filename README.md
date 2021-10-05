@@ -10,8 +10,6 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Project Notes](#useful-resources)
 - [Author](#author)
 
@@ -29,12 +27,13 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop View Light](/final/desktop-view-light.JPG)
+![Desktop View Light](/final/desktop-view-dark.JPG)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/michb0t/fem-social-dashboard-toggle-on-off)
+- Live Site URL: [Live Solution](https://michb0t.github.io/fem-social-dashboard-toggle-on-off/)
 
 ## My process
 
@@ -44,26 +43,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-
-### What I learned
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+- Javascript
 
 ### Project notes 
 
@@ -92,7 +72,6 @@ const proudOfThisFunc = () => {
 
 # Gradient border
 - Use the pseudo ::before style to create the top border lime. Border with linear gradients are not supported. 
-
 
 ### Author
 
